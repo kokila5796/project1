@@ -14,24 +14,25 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="category">categories</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">price</a></li>
-      <li><a href="#">filter</a></li>
-      <li><a href="#">sort</a></li>
-     
-    </ul>
-  </div>
-</nav>
+    <table class="table table-striped">
+    
+     <td align="center">add:</td>
+    <td><input type="text" name="add">
+    <tr> <td>&nbsp;</td> </tr>
+    <td align='center'>delete:</td></br>
+    <td><input type="text" name="delete">
+    <tr> <td>&nbsp;</td> </tr>
+    <td align="center">update:</td>
+    <td><input type="text" name="update">
+     <tr> <td>&nbsp;</td> </tr>
+     <td><input type="submit"name="submit">
+     </td>
+
+   
+   
+</table>
+
   
-<div class="container">
-  <h3>Basic Navbar Example</h3>
-  <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
-</div>
 
 </body>
 </html>

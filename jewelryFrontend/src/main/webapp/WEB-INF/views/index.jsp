@@ -12,42 +12,70 @@
 <meta name="keywords" content="keyword1, keyword2, keyword3">
 <link type="text/css" rel="stylesheet"
 	href="<c:url value="resources/css/style.css"/>" />
+	<style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+  }
+  </style>
 </head>
-<body>
-	<div class="main">
-		<div class="page">
-			<div class="header">
-				<div class="banner">
-					<h1>
-						<center><i>HOUSEHOLD APPLIANCES</i></center>
-					</h1>
+</head>
+
+
+<body bgcolor="white" background="<c:url value="resources/images/aaa.jpg"/>">
+<div class="main">
+	   <div class="header">
+		
+		<h1>
+		<img src="<c:url value="resources/images/koki.png"/>" width="" height="" align="center">
+		
+			</h1>
 				</div>
 				<div class="topmenu">
-					<ul>
-						<li style="border-left: medium none;">
-						<ul class="list-inline">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About us</a></li>
-    <li><a href="category">category</a></li>
-    <li><a href="#">product</a></li>
-  
-<li><a href="register">signup</a></li>
-    <li><a href="login">login</a></li>
-    <li><a href="#">menu</a></li>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
     
-						
-						</ul>
-						</div>
-						
-
-			<ul class="pager">
-    <li class="previous"><a href="#">Previous</a></li>
-    <li class="next"><a href="#">Next</a></li>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <div class="navbar-header">
+      </div>
+      <a class="navbar-brand" href="#">About us</a>
+    
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">product<span class="caret"></span></a>
+        <ul class="dropdown-menu"style=background-color:black>
+          <li><a href="#">Page 1-1</a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+      </li>
+       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">menu<span class="caret"></span></a>
+        <ul class="dropdown-menu"style=background-color:black>
+          <li><a href="#">bed</a></li>
+          <li><a href="#">bath</a></li>
+          <li><a href="#">furniture</a></li>
+          <li><a href="#">kids room</a></li>
+          <li><a href="#">decor</a></li>
+          <li><a href="#">household accessories</a></li>
+        </ul>
+      </li>
+     
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+  			<ul class="pager">
+    <li class="previous"><a href="signup"style=background-color:red>Previous</a></li>
+    <li class="next"><a href="home"style=background-color:red>Next</a></li>
   </ul>
 			<div class="content">
 				<div class="content-in">
 					<div class="left-panel">
-						<h2>Must have</h2>
+					<h2>categories</h2>
+						<h3>Must have</h3>
 						<div class="left-content">
 							<ul>
 								<li><a href="#"> looks for your home</a></li>
@@ -58,7 +86,7 @@
 									<li><a href="#"><b>TOP OFFERS</b></a></li>
 								</h2>
 								<li><a href="#">raymond home bedsheet</a></li>
-								<li><a href="#">filled bean bags-flat 30%</a></li>
+								<li><a href="#">filled bean bags-flat</a></li>
 								<li><a href="#">wall stickers starting </a></li>
 								<li><a href="#">esprit umbrellas</a></li>
 
@@ -89,21 +117,58 @@
 							<c:if test="${userClickedregister}">
 								<jsp:include page="register.jsp" />
 							</c:if>
-							<c:if test="${category}">
+							<c:if test="${userClickedcategory}">
 								<jsp:include page="category.jsp" />
 							</c:if>
 							<c:if test="${home}">
                                <h2 class="title"><span>Welcome to Our <span>ShoppingCart</span></span></h2>
-								<p>
-									<strong> </strong> of the printing and typesetting industry. <a
-										href="#">Lorem Ipsum has been</a> the industry's standard
-									dummy text ever since the 1500s, when an unknown printer took a
-									galley of type and scrambled it to make a type specimen book. <br>
-									It has survived not only five centuries, <a href="#">but
-										also the leap into electronic typesetting</a>, remaining
-									essentially unchanged. It was popularised in the 1960s with the
-									release of Letraset sheets containing Lorem Ipsum passages
-								</p>
+                               <style>
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="img_chania.jpg" alt="Chania" width="460" height="345">
+      </div>
+
+      <div class="item">
+        <img src="img_chania2.jpg" alt="Chania" width="460" height="345">
+      </div>
+    
+      <div class="item">
+        <img src="img_flower.jpg" alt="Flower" width="460" height="345">
+      </div>
+
+      <div class="item">
+        <img src="img_flower2.jpg" alt="Flower" width="460" height="345">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
 							</c:if>
 						
 					</div>

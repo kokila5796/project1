@@ -17,7 +17,7 @@ public class homecontroller {
 		@RequestMapping("/category")
 		public String category(Model model)
 		{
-			model.addAttribute("category","true");
+			model.addAttribute("userClickedcategory","true");
 			return "index";
 	    }
 		
@@ -49,13 +49,6 @@ public class homecontroller {
 		public String hiding(Model model)
 		{
 			model.addAttribute("userClicklogin",true);
-			return "index";
-			
-		}
-		@RequestMapping("/logout")
-		public String logout(Model model)
-		{
-			model.addAttribute("userClicklogout",true);
 			return "index";
 			
 		}
