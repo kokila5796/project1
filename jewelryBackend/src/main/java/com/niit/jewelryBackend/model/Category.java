@@ -13,15 +13,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class Category {
 	
-	private String id;
+	private String cat_id;
 	private String name;
 	private String description;
+	
 	@Id
-	public String getId() {
-		return id;
+	public String getCat_id() {
+		return cat_id;
 	}
-	public  void setId(String id) {
-		this.id = id;
+	public void setCat_id(String cat_id) {
+		this.cat_id = cat_id;
 	}
 	public String getName() {
 		return name;
@@ -35,5 +36,6 @@ public class Category {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
+	
+	
 }

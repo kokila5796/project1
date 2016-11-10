@@ -36,9 +36,9 @@ public class CategoryTestCase {
 	public void CreateCategoryTestCase()
 	{
 		
-		category.setId("002");
-        category.setDescription("this is appliances category");
-        category.setName("appliances category");
+		category.setCat_id("002");
+        category.setDescription("cteate category");
+        category.setName("category");
         
         Assert.assertEquals("create category test case", true, categorydao.save(category));
 	
@@ -48,7 +48,7 @@ public class CategoryTestCase {
 	public void updateCategoryTestCase()
 	{
 		
-		category.setId("001");
+		category.setCat_id("001");
         category.setDescription("this is appliances category");
         category.setName("category");
         
@@ -58,7 +58,7 @@ public class CategoryTestCase {
 	@Test
 	public void deleteCategoryTestCase()
 	{
-		category.setId("002");
+		category.setCat_id("002");
 		 Assert.assertEquals("create category test case", true, categorydao.delete(category));
 		
 	}

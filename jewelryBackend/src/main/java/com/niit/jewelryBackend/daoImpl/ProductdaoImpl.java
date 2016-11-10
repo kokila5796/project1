@@ -9,20 +9,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.niit.jewelryBackend.dao.Categorydao;
-import com.niit.jewelryBackend.model.Category;
+import com.niit.jewelryBackend.dao.Productdao;
+import com.niit.jewelryBackend.model.Product;
 
 
 
 
-@Repository("categorydao")
-public class CategorydaoImpl implements Categorydao
+
+@Repository("productdao")
+public class ProductdaoImpl implements Productdao
 {
 
 	@Autowired
 	SessionFactory sessionFactory;
-	
-	public  CategorydaoImpl (SessionFactory sessionFactory)
+	public ProductdaoImpl(){}
+	public  ProductdaoImpl (SessionFactory sessionFactory)
 	{
 		
 		
@@ -30,10 +31,10 @@ public class CategorydaoImpl implements Categorydao
 	}
 	
 	@Transactional
-	public boolean save(Category category) {
+	public boolean save(Product product) {
 		try {
 			
-			sessionFactory.getCurrentSession().save(category);
+			sessionFactory.getCurrentSession().save(product);
 			return true;
 		} catch (HibernateException e) {
 			
@@ -45,9 +46,9 @@ public class CategorydaoImpl implements Categorydao
 	}
 
 	@Transactional
-	public boolean update(Category category) {
+	public boolean update(Product product) {
 		 try {
-			sessionFactory.getCurrentSession().update(category);
+			sessionFactory.getCurrentSession().update(product);
 			return true;
 		} catch (HibernateException e) {
 			
@@ -57,9 +58,9 @@ public class CategorydaoImpl implements Categorydao
 	}
 
 	@Transactional
-	public boolean delete(Category category) {
+	public boolean delete(Product product) {
 		try {
-			sessionFactory.getCurrentSession().delete(category);
+			sessionFactory.getCurrentSession().delete(product);
 			return true;
 		} catch (HibernateException e) {
 			
@@ -69,14 +70,14 @@ public class CategorydaoImpl implements Categorydao
 	}
 
 	@Transactional
-	public Category get(String cat_id) {
+	public Product get(String id) {
 		
-		return (Category) sessionFactory.getCurrentSession().get(Category.class, cat_id);
+		return (Product) sessionFactory.getCurrentSession().get(Product.class, id);
 	}
 
 	@Transactional
-	public List<Category> list() {
-		String hql = "from category";
+	public List<Product> list() {
+		String hql = "from product";
 		Query query= sessionFactory.getCurrentSession().createQuery(hql);
 		return query.list();
 		
@@ -93,7 +94,3 @@ public class CategorydaoImpl implements Categorydao
 
 
 	}
-	
-	
-
-
